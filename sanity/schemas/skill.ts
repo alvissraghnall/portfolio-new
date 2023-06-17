@@ -20,11 +20,11 @@ export default defineType({
       title: 'Name',
       type: 'string',
     }),
-    defineField({
-      name: 'backgroundColor',
-      title: 'BackgroundColor',
-      type: 'string',
-    }),
+    // defineField({
+    //   name: 'backgroundColor',
+    //   title: 'BackgroundColor',
+    //   type: 'string',
+    // }),
     defineField({
       name: 'icon',
       title: 'Icon',

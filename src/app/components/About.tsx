@@ -3,8 +3,9 @@ import Image from 'next/image';
 import { useState } from 'react';
 import {motion} from 'framer-motion';
 import { urlFor } from '@/sanity-client';
+import Wrapper from './Wrapper';
 
-interface Props {
+export interface Props {
   abouts: {
     title: string,
     description: string,
@@ -12,23 +13,7 @@ interface Props {
   }[]
 }
 
-const About = ({ abouts }: Props) => {
-  const abouts02 = [
-    {
-      title: 'Frontend Development',
-      description: 'I create and build beautiful websites with insane User EXperience',
-      image: ''
-    }, {
-      title: 'Backend Development',
-      description: 'I build highly scalable and efficient Backend Servers as well as APIs',
-      image: ''
-    },
-    {
-      title: 'Blockchains Development',
-      description: 'I constantly explore the pulchritidinous world of Blockchains...',
-      image: ''
-    },
-  ];
+function About ({ abouts }: Props) {
   return (
     <div className="flex-col w-full flex-1 mt-9">
       <h2 className='font-extrabold text-4xl text-center text-deep-black capitalize 4xl:text-6xl max-xs:text-3xl '>
@@ -70,4 +55,4 @@ const About = ({ abouts }: Props) => {
   )
 }
 
-export default About;
+export default Wrapper(About, "about");

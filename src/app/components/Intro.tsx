@@ -4,6 +4,7 @@ import { AnimatePresence, VariantLabels, Variants, motion } from "framer-motion"
 import Image from "next/image";
 import { SiTypescript } from "react-icons/si";
 import { DiAngularSimple, DiIntellij, DiReact } from "react-icons/di";
+import Wrapper from "./Wrapper";
 
 const variants: Variants = {
     whileInView: {
@@ -16,9 +17,9 @@ const variants: Variants = {
     }
 }
 
-export default function Intro () {
+function Intro () {
     return (
-        <div id="home" className="centered-flex relative bg-[url('/assets/bgIMG.png')] bg-cover bg-repeat bg-center flex-1 flex-col w-full h-full pt-24 pb-8 xs:pb-0 px-4 xs:px-8 xl:flex-row 4xl:pt-32">
+        <div className="centered-flex relative bg-[url('/assets/bgIMG.png')] bg-cover bg-repeat bg-center flex-1 flex-col w-full h-full pt-24 pb-8 xs:pb-0 px-4 xs:px-8 xl:flex-row 4xl:pt-32">
 
         <AnimatePresence>
             <motion.div
@@ -95,3 +96,5 @@ export default function Intro () {
         </div>
     )
 }
+
+export default Wrapper(Intro, 'home');

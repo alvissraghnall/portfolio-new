@@ -8,7 +8,7 @@ export default defineType({
         defineField({
             name: 'year',
             title: 'Year',
-            type: 'string',
+            type: 'number',
         }),
         defineField({
             name: 'works',
