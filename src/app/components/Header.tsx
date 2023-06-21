@@ -16,7 +16,7 @@ function Header() {
                 </div>
                 <ul className="flex-1 justify-center items-center list-none hidden lg:flex">
                     {
-                        ['Home', 'About', 'Projects', 'Skills', 'Testimonials', 'Contact'].map((item, index) => (
+                        ['Home', 'About', 'Projects', 'Skills', 'Contact'].map((item, index) => (
                             <li key={`link-${index}`} className='centered-flex paragraph my-0 mx-4 cursor-pointer flex-col group'>
                                 <div className='w-1.5 h-1.5 bg-transparent rounded-full mb-1.5 group-hover:bg-secondary ' />
                                 <a href={`#${item.toLowerCase()}`} className='text-normal-gray flex-col uppercase font-medium transition-all duration-300 ease-in-out hover:text-secondary no-underline'>{item}</a>
@@ -41,7 +41,7 @@ function Header() {
                                 <HiX onClick={() => setSidebar(false)} className='w-8 h-8 text-secondary my-2 mx-4 cursor-pointer' />
                                 <ul className='list-none m-0 p-0 h-full w-full flex justify-start items-start flex-col space-y-4'>
                                     {
-                                        ['Home', 'About', 'Projects', 'Skills', 'Testimonials', 'Contact'].map((item, index) => (
+                                        ['Home', 'About', 'Projects', 'Skills', 'Contact'].map((item, index) => (
                                             <li key={index}>
                                                 <a onClick={() => setSidebar(false)} href={`#${item.toLowerCase()}`} className='text-normal-gray flex-col uppercase font-medium text-base transition-all duration-300 ease-in-out hover:text-secondary no-underline'>{item}</a>
                                             </li>

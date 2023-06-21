@@ -73,7 +73,7 @@ function Intro ({ me }: Props) {
                 <Image 
                     src={urlFor(me[0].image).url()} 
                     alt="Profile Image" 
-                    className="w-full z-[1] object-contain rounded-full translate-x-[5px] -translate-y-[1px] 3xl:translate-x-[7px] 3xl:-translate-y-[-4px]" 
+                    className="w-full z-[1] object-contain rounded-full translate-y-[4px]" 
                     width={550}
                     height={550}
                 />

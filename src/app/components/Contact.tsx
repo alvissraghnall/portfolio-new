@@ -185,7 +185,7 @@ function Contact() {
               <input
                 type="text"
                 name="name"
-                className={`paragraph w-full p-4 border-none rounded-md bg-primary ${poppins.className} text-secondary outline-none ${!formData.name.error && 'bg-green-300 !text-blanc text-sm block'} ${formData.name.error && formData.name.touched && 'bg-red-300 text-sm block !text-red-200'}`}
+                className={`paragraph w-full p-4 border-none rounded-md bg-primary ${poppins.className} text-secondary outline-none ${!formData.name.error && '!bg-green-400 !text-blanc text-sm block'} ${formData.name.error && formData.name.touched && 'bg-red-300 text-sm block !text-red-200'}`}
                 value={name.value}
                 onChange={handleInputChange}
                 onBlur={handleBlur}
@@ -200,7 +200,7 @@ function Contact() {
               <input
                 type="text"
                 name="email"
-                className={`paragraph w-full p-4 border-none rounded-md bg-primary font-poppins text-secondary outline-none ${poppins.className} ${!formData.email.error && 'bg-green-500 text-blanc text-sm block'} ${!formData.email.error && 'bg-green-300 !text-blanc text-sm block'} ${formData.email.error && formData.email.touched && 'bg-red-300 text-sm block !text-red-200'}`}
+                className={`paragraph w-full p-4 border-none rounded-md bg-primary font-poppins text-secondary outline-none ${poppins.className} ${!formData.email.error && '!bg-green-400 text-blanc text-sm block'} ${!formData.email.error && 'bg-green-300 !text-blanc text-sm block'} ${formData.email.error && formData.email.touched && 'bg-red-300 text-sm block !text-red-200'}`}
                 value={email.value}
                 onChange={handleInputChange}
                 onBlur={handleBlur}
@@ -219,7 +219,7 @@ function Contact() {
                 rows={10}
                 onChange={handleInputChange}
                 onBlur={handleBlur}
-                className={`paragraph h-44 hover:shadow-primary hover:shadow-md w-full p-4 border-none rounded-md bg-primary ${poppins.className} text-secondary outline-none ${!formData.message.error && 'bg-green-300 !text-blanc text-sm block'} ${formData.message.error && formData.message.touched && 'bg-red-300 text-sm block !text-red-200'}`}
+                className={`paragraph h-44 hover:shadow-primary hover:shadow-md w-full p-4 border-none rounded-md bg-primary ${poppins.className} text-secondary outline-none ${!formData.message.error && '!bg-green-400 !text-blanc text-sm block'} ${formData.message.error && formData.message.touched && 'bg-red-300 text-sm block !text-red-200'}`}
                 placeholder='Your Message'
               />
               {(formData.message.touched 
