@@ -4,6 +4,8 @@ import { useState } from 'react';
 import {motion} from 'framer-motion';
 import { urlFor } from '@/sanity-client';
 import Wrapper from './Wrapper';
+import MotionWrapper from './MotionWrapper';
+
 
 export interface Props {
   abouts: {
@@ -16,7 +18,7 @@ export interface Props {
 function About ({ abouts }: Props) {
   return (
     <div className="flex-col w-full flex-1 mt-9">
-      <h2 className='font-extrabold text-4xl text-center text-deep-black capitalize 4xl:text-6xl max-xs:text-3xl '>
+      <h2 className='font-bold text-center text-black/75 text-4xl capitalize 4xl:text-6xl max-xs:text-3xl '>
         Here to create 
         <span className='text-secondary'> Excellent Builds </span> <br />
         for you {' '}
@@ -55,4 +57,6 @@ function About ({ abouts }: Props) {
   )
 }
 
-export default Wrapper(About, "about");
+export default Wrapper(
+  MotionWrapper(About), "about",  "bg-blanc/90"
+);

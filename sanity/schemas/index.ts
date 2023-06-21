@@ -6,6 +6,7 @@ import contact from './contact';
 import experiences from './experiences';
 import workExperience from './work-experience';
 import testimonials from './testimonials';
+import me from './me';
 
 export const schemaTypes = [
     testimonials, 
@@ -15,5 +16,6 @@ export const schemaTypes = [
     brand,
     contact,
     experiences,
-    workExperience
+    workExperience,
+    me
 ]

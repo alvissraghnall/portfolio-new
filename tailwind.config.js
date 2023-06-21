@@ -28,6 +28,10 @@ module.exports = {
         ...defaultTheme.screens,
         '3xl': '1600px',
         '4xl': '2000px'
+      },
+      fontFamily: {
+        "poppins": "Poppins", 
+        "dm-sans": "DM Sans"
       }
     },
   },

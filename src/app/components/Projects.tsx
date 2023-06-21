@@ -8,6 +8,7 @@ import Image from "next/image";
 import { urlFor } from "@/sanity-client";
 import Link from "next/link";
 import { DiGithubBadge, DiGithubFull } from "react-icons/di";
+import MotionWrapper from "./MotionWrapper";
 
 type Props = {
   projects: {
@@ -25,7 +26,7 @@ type Props = {
 function Projects({ projects }: Props) {
   const [activeFilterItem, setActiveFilterItem] = useState('All');
   const [animateCard, setAnimateCard] = useState({ y: 0, opacity: 1 });
-  const [filterProject, setFilterProject] = useState<Props["projects"]>([]);
+  const [filterProject, setFilterProject] = useState<Props["projects"]>(projects);
 
   const handleFilter = (item: string) => {
     setActiveFilterItem(item);
@@ -38,20 +39,20 @@ function Projects({ projects }: Props) {
         y: 0, opacity: 1
       });
 
-      if (item === 'All') setFilterProject(filterProject);
+      if (item === 'All') setFilterProject(projects);
       else setFilterProject(filterProject.filter(proj => proj.tags.includes(item)))
     }, 500);
   }
 
   return (
-    <section className="flex-1 w-full flex-col">
-      <h2 className='font-extrabold text-4xl text-center text-deep-black capitalize 4xl:text-6xl max-xs:text-3xl '>
+    <section className="flex-1 w-full flex-col bg-primary">
+      <h2 className='font-bold text-4xl text-center text-black/75 capitalize 4xl:text-6xl max-xs:text-3xl '>
         My Projects <br />
       </h2>
 
       <div className="flex flex-row justify-center items-center flex-wrap my-12 mx-0">
         {
-          ["React", "Svelte", "Java", "Frontend", "Bakcend", "All"]
+          ["React", "Svelte", "Java", "Frontend", "Backend", "All"]
             .map((item, index) => (
               <div
                 key={index}
@@ -71,7 +72,7 @@ function Projects({ projects }: Props) {
         className="flex flex-wrap justify-center items-center"
       >
         {
-          projects.map(
+          filterProject.map(
             (proj, index) => (
               <div 
                 key={index}
@@ -158,4 +159,4 @@ function Projects({ projects }: Props) {
   )
 }
 
-export default Wrapper(Projects, "projects");
+export default Wrapper(MotionWrapper(Projects), "projects", "bg-primary");

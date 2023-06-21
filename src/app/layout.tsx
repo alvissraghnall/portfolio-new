@@ -1,5 +1,12 @@
 import './globals.css'
+import { DM_Sans } from 'next/font/google';
 // import { Inter } from 'next/font/google'
+
+const dmSans = DM_Sans({
+  weight: ['400', '500', '700',],
+  style: 'normal',
+  subsets: ['latin', 'latin-ext']
+});
 
 // const inter = Inter({ subsets: ['latin'] })
 
@@ -15,7 +22,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={``}>{children}</body>
+      <body className={`${dmSans.className}`}>{children}</body>
       
     </html>
   )

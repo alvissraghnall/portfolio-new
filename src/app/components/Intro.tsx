@@ -5,6 +5,7 @@ import Image from "next/image";
 import { SiTypescript } from "react-icons/si";
 import { DiAngularSimple, DiIntellij, DiReact } from "react-icons/di";
 import Wrapper from "./Wrapper";
+import { urlFor } from "@/sanity-client";
 
 const variants: Variants = {
     whileInView: {
@@ -17,7 +18,13 @@ const variants: Variants = {
     }
 }
 
-function Intro () {
+type Props = {
+    me: {
+        image: string
+    }[]
+}
+
+function Intro ({ me }: Props) {
     return (
         <div className="centered-flex relative bg-[url('/assets/bgIMG.png')] bg-cover bg-repeat bg-center flex-1 flex-col w-full h-full pt-24 pb-8 xs:pb-0 px-4 xs:px-8 xl:flex-row 4xl:pt-32">
 
@@ -63,7 +70,13 @@ function Intro () {
                 transition={{ duration: .5, delayChildren: .4}}
                 className="flex-1 h-full flex justify-end items-end relative"
             >
-                <img src="/assets/me.png" alt="Profile Image" className="w-full z-[1] object-contain rounded-full translate-x-[5px] -translate-y-[1px] 3xl:translate-x-[7px] 3xl:-translate-y-[-4px]" />
+                <Image 
+                    src={urlFor(me[0].image).url()} 
+                    alt="Profile Image" 
+                    className="w-full z-[1] object-contain rounded-full translate-x-[5px] -translate-y-[1px] 3xl:translate-x-[7px] 3xl:-translate-y-[-4px]" 
+                    width={550}
+                    height={550}
+                />
                 <motion.img 
                     whileInView={{ scale: [0,1]}}
                     src="/assets/circle.svg"
