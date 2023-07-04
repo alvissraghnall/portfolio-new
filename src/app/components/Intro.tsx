@@ -73,16 +73,16 @@ function Intro ({ me }: Props) {
                 <Image 
                     src={urlFor(me[0].image).url()} 
                     alt="Profile Image" 
-                    className="w-full z-[1] object-contain rounded-full translate-y-[4px]" 
+                    className="w-full bg=gray-200 mb-4 z-[1] object-contain rounded-full translate-y-[4px]" 
                     width={550}
                     height={550}
                 />
-                <motion.img 
+                { /** <motion.img 
                     whileInView={{ scale: [0,1]}}
                     src="/assets/circle.svg"
                     className="absolute left-0 right-0 bottom-0 z-0 w-full h-5/6"
                     transition={{ duration: 1, ease: 'easeInOut' }}
-                />
+                /> */ }
             </motion.div>
 
             <motion.div
