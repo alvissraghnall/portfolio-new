@@ -124,7 +124,7 @@ function Contact() {
         Take a coffee && get in touch with me.
       </h2>
 
-      <div className="w-3/5 lg:w-[unset] flex justify-evenly flex-wrap-reverse my-16 mb-8 mx-8 items-center max-md:w-full">
+      <div className="w-3/5 lg:w-[unset] flex justify-evenly flex-wrap-reverse my-16 mb-8 md:mx-8 items-center max-md:w-full">
         <motion.div
           className="min-w-[300px] flex flex-row justify-start items-center my-4 mx-0 p-4 rounded-xl cursor-pointer bg-[#ecdddf] hover:shadow-md hover:shadow-[#fef4f5] max-xs:w-full"
           whileInView={{

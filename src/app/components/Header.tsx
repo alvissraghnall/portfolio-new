@@ -8,7 +8,7 @@ import { HiMenuAlt4, HiX } from 'react-icons/hi';
 function Header() {
     const [sidebar, setSidebar] = useState(false);
     return (
-        <header className='w-full py-4 px-8 bg-white/25 blur-[4] border border-solid fixed z-[2] border-slate-50/20'>
+        <header className='w-full py-4 px-8 bg-white/25 blur-[4] border border-solid md:fixed z-[2] border-slate-50/20'>
             <nav className='items-center justify-between flex'>
                 <div className="flex justify-start items-center">
                     <Image src="/assets/logo.png" width={128} height={77} alt="logo" className='2xl:w-48 2xl:h-10 w-24 h-12' />
