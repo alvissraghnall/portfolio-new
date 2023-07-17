@@ -180,7 +180,7 @@ function Contact() {
 
       {
         !isFormSubmitted
-          ? <form onSubmit={handleSubmit} className="centered-flex w-3/5 flex-col my-4 mx-8 max-md:w-full max-md:my-4">
+          ? <form onSubmit={handleSubmit} className="centered-flex w-3/5 flex-col my-4 md:mx-8 max-md:w-full max-md:my-4">
             <div className="centered-flex w-full my-3 mx-0 rounded-lg cursor-pointer flex-col transition-all duration-300 ease-in-out">
               <input
                 type="text"
