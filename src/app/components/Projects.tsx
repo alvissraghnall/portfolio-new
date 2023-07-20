@@ -76,7 +76,7 @@ function Projects({ projects }: Props) {
             (proj, index) => (
               <div 
                 key={index}
-                className="w-72 flex-col m-8 p-4 rounded-lg bg-white/95 text-neutral-950 centered-flex cursor-pointer transition-all duration-300 ease-out hover:shadow-lg hover:shadow-black/20 4xl:w-[450px] 4xl:p-3 4xl:rounded-xl max-[300px]:w-full max-[300px]:m-4"
+                className="w-[25rem] h-[23rem] flex-col m-8 p-4 rounded-lg bg-white/95 text-neutral-950 centered-flex cursor-pointer transition-all duration-300 ease-out hover:shadow-lg hover:shadow-black/20 4xl:w-[450px] 4xl:p-3 4xl:rounded-xl max-[300px]:w-full max-[300px]:m-4"
               >
                 <div className="w-full h-56 relative centered-flex 4xl:h-80">
                   <Image 
