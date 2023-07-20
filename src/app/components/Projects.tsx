@@ -52,7 +52,7 @@ function Projects({ projects }: Props) {
 
       <div className="flex flex-row justify-center items-center flex-wrap my-12 mx-0">
         {
-          ["React", "Svelte", "Java", "Frontend", "Backend", "All"]
+          ["React", "Svelte", "Java", "Typescript", "Vue.js", "Frontend", "Backend", "All"]
             .map((item, index) => (
               <div
                 key={index}
