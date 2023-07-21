@@ -32,7 +32,16 @@ module.exports = {
       fontFamily: {
         "poppins": "Poppins", 
         "dm-sans": "DM Sans"
-      }
+      },
+      keyframes: {
+        fadeIn: {
+          "0%": { opacity: "0" },
+          "100%": { opacity: "100" },
+        },
+      },
+      animation: {
+        fadeIn: "fadeIn 0.27s ease-in-out forwards",
+      },
     },
   },
   plugins: [],
