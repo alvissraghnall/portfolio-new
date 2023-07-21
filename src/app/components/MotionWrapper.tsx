@@ -6,7 +6,7 @@ function MotionWrapper (Component: React.FC<any>, classNames?: string) {
     return function HOC (props?: any) {
         return (
             <motion.div
-                className={`centered-flex ${classNames}`}
+                className={`centered-flex ${classNames ?? ''}`}
                 whileInView={{
                     y: [100, 50, 0],
                     opacity: [0,0,1]
@@ -25,4 +25,4 @@ function MotionWrapper (Component: React.FC<any>, classNames?: string) {
 }
 // }
 
-export default MotionWrapper
+export default MotionWrapper;

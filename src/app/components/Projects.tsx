@@ -159,4 +159,4 @@ function Projects({ projects }: Props) {
   )
 }
 
-export default Wrapper(MotionWrapper(Projects), "projects", "bg-primary");
+export default Wrapper(MotionWrapper(Projects, "w-full"), "projects", "bg-primary");
