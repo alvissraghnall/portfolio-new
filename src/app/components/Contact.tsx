@@ -121,10 +121,10 @@ function Contact() {
   return (
     <div>
       <h2 className='text-4xl font-bold text-center text-black/75 capitalize 4xl:text-6xl max-xs:text-[2rem]'>
-        Take a coffee && get in touch with me.
+        Take a breath && get in touch with me.
       </h2>
 
-      <div className="w-3/5 lg:w-[unset] flex justify-evenly flex-wrap-reverse my-16 mb-8 md:mx-8 items-center max-md:w-full">
+      <div className="w-full flex justify-evenly flex-wrap-reverse my-16 mb-8 mx-auto items-center">
         <motion.div
           className="min-w-[300px] flex flex-row justify-start items-center my-4 mx-0 p-4 rounded-xl cursor-pointer bg-[#ecdddf] hover:shadow-md hover:shadow-[#fef4f5] max-xs:w-full"
           whileInView={{
@@ -180,7 +180,7 @@ function Contact() {
 
       {
         !isFormSubmitted
-          ? <form onSubmit={handleSubmit} className="centered-flex w-3/5 flex-col my-4 md:mx-8 max-md:w-full max-md:my-4">
+          ? <form onSubmit={handleSubmit} className="centered-flex w-full mx-0 flex-col my-4 max-md:my-4">
             <div className="centered-flex w-full my-3 mx-0 rounded-lg cursor-pointer flex-col transition-all duration-300 ease-in-out">
               <input
                 type="text"

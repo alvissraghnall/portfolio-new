@@ -78,7 +78,7 @@ function Skills({ skills, experiences }: Props) {
                     </div>
 
                     <motion.div
-                      className="grid divide-y divide-neutral-200 max-w-xl mx-auto mt-8"
+                      className="grid divide-y divide-neutral-200 max-w-xl mx-auto mt-8 w-full"
                     >
                       {
                         exp.works.map(
